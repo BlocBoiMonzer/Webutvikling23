@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    background-color: darkorchid;
+    max-width: 1200px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+header nav ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.default-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.default-flex h2{
+    flex-basis: 100%;
+}
+
+.default-flex article{
+    flex-basis: auto;
+    min-width: 300;
+}
+
+.default-flex article img{
+    width: 100%;
+}
