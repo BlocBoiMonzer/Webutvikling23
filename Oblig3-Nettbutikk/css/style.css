@@ -4,13 +4,15 @@
 
 body{
     margin: 0 auto;
-    background-color: darkorchid;
+    background-color: #F8F7CD;
     max-width: 1200px;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #logo {
+    margin-left: 2rem;
+    margin-top: 2rem;
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -73,6 +75,10 @@ nav {
 }
 */
 
+#subtitle {
+    margin: 1rem;
+}
+
 .hero-content {
     background-image: url('https://placehold.co/1920x1080');
     background-size: cover;
@@ -80,6 +86,14 @@ nav {
     padding: 50px;
     color: black; 
     text-align: left; 
+}
+
+.not-hero-content {
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: black; 
+    text-align: center; 
 }
 
 /* grid setup*/
@@ -105,6 +119,48 @@ nav {
     }
 }
 
+/* product page */
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-details img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .product-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10rem;
+        margin: 0 auto; /* centers the grid horizontally */
+        margin-bottom: 10%;
+    }
+
+    .product-details img {
+        width: auto;
+    }
+}
+
+/* generell flex*/
+
+.article-link {
+    display: block;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    margin: 10px;
+    background-color: #fefef7;
+}
+
+.article-link:hover {
+    border: 1px solid #e0e0e0;
+}
 
 .default-flex {
     display: flex;
@@ -121,6 +177,7 @@ nav {
 @media (min-width: 768px) {
     .default-flex article{
         flex-basis: calc(33.33% - 20px); /* Display in three columns on desktop */
+        min-width: 0;
     }
 }
 
@@ -145,3 +202,30 @@ nav {
     width: 100%;
 }
 */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    margin: 0 1rem;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    color: #ddd;
+}
