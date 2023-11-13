@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my page for analysis.">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Flexbox</title>
+    <title>SEO</title>
 </head>
 <body class="container">
+    <a class="skip-link" href="#content">Skip to main content</a>
     <header>
         <span>
             <a href="index.html" id="logo">Logo</a>
@@ -24,11 +26,90 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="content">
         <section class="asd">
-        <article>
+        <article class="analysis-content">
             <h2 id="title">Analyse</h2>
-            <p>asdklj asdj wer ioawsnklf kljawdkljcji ikjawed ioawnf jasd nrtg jnvxc jdrth uizuivjnks. dfhjkzxch ukj jklsdfl jxcv l jksefjnm,wef. efjkh jasedfjklsdf ,a aseff. awdhuiawduio. awduicjk</p>
+            <p>Siden designet er mobile first og det er vanligvis slik at hvis alt funker på mobil, så funker det på desktop, velger jeg å kun kjøre lighthouse for mobil. I tillegg kjørte jeg analysen to ganger. Den første med mappen til Oblig 3, og den andre med Oblig 4. Den eneste forskjellen på tidspunktet testen ble kjørt var at jeg brukte ekte bilder. Dette er fordi jeg brukte kun placeholders i Oblig 4. Jeg synes at analysen ble unøyaktig på grunn av det. </p>
+
+            <p>Her er skjermbildene av analysen for de forskjellige sidene</p>
+            <img src="./img/before-lighthouse-mobile-1.JPG" alt="bilder for analysesiden">
+            <img src="./img/before-lighthouse-mobile-2.JPG" alt="bilder for analysesiden">
+            <img src="./img/before-lighthouse-mobile-3.JPG" alt="bilder for analysesiden">
+            <img src="./img/before-lighthouse-mobile-4.JPG" alt="bilder for analysesiden">
+            <p> Dette var så og si de samme resultatene for hver side, uansett om jeg bytta bildene eller ikke. Derfor skal jeg ikke sette inn alle skjermbildene for å unngå gjentagelse og holde det lesbart. De ligger fortsatt i "img" mappen. Det virker hovedproblemet er at jeg ikke har “explicit width and height” tags på bildene: "Image elements do not have explicit width and height." Dette er bare fordi jeg kodet med mobile-first prinsippet og satte alle bildene til å ha width 100% med mindre de er på PC. I tillegg er de begrenset av forelderelementet deres også.</p>
+            <p>"Document does not have a meta description". Dette fikset jeg i oblig 4</p>
+            <p>"Serves images with low resolution": Dette er et valg jeg tok siden jeg mener at det ikke er nødvendig med høyere oppløsning for denne nettsiden. Hvis dette hadde vært for en ekte kunde derimot, hadde jeg lastet opp bilder med minst 72 Pixels per inch og minst 1000px på den lengste siden og maks 2MB filstørrelse for best ytelse og brukeopplevelse. Kilde: <a href="https://www.shopify.com/blog/image-sizes">https://www.shopify.com/blog/image-sizes</a></p>
+        </article>
+
+        <article class="generic-article">
+            <h3>Chatgpt analyse</h3>
+            <h4>index.html</h4>
+            <ol class="analysis-list">
+                <li> SEO
+                    <ul>
+                        <li>Title Tag:</li>
+                            <ul>
+                                <li>Issue: The title tag is generic and should provide a concise description of the page content for better SEO.                                    
+                                </li>
+                                <li>
+                                    Fix: Update the "< title >" tag to be more descriptive, incorporating relevant keywords.
+                                </li>
+                            </ul>
+        
+                        <li>Meta Description:</li>
+                            <ul>
+                                <li>Issue: The meta description is not present.                            
+                                </li>
+                                <li>
+                                    Fix: Add a descriptive meta tag.
+                                </li>
+                            </ul>
+                    </ul>
+                </li>
+
+                <li> Accessibility
+                    <ul>
+                        <li>Skip to Main Content Link:</li>
+                            <ul>
+                                <li>Issue: No skip to content link.                                    
+                                </li>
+                                <li>
+                                    Fix: Add the link.
+                                </li>
+                            </ul>
+        
+                        <li>Images:</li>
+                            <ul>
+                                <li>Issue: Images lack informative alt attributes, which is crucial for users relying on screen readers.                         
+                                </li>
+                                <li>
+                                    Fix: Add descriptive alt text to each < img > tag, summarizing the content of the images.
+                                </li>
+                            </ul>
+
+                            <li>Navigation Links:</li>
+                            <ul>
+                                <li>Issue: The navigation links are relatively generic and lack context.                         
+                                </li>
+                                <li>
+                                    Fix: Provide more descriptive and contextual anchor text for navigation links to improve accessibility.
+                                </li>
+                            </ul>
+                    </ul>
+                </li>
+                
+            </ol>
+            <p>Skip navigasjon påstanden fra ChatGPT er usann fordi den ikke kunne se min CSS. I tillegg er jeg bevisst over at beskrivelsene i både, meta, img alt og title er for enkle eller korte, men igjen, ser jeg ikke en grunn til å utdype disse, siden nettsiden ikke har noe ordentlig innhold uansett.</p>
+
+            <h4>produkt.html</h4>
+            <p>Her ble det samme gjentatt av ChatGPT</p>
+            <h4>prodkategori.html</h4>
+            <p>Her ble det samme gjentatt av ChatGPT</p>
+
+            <h3>Webaim</h3>
+            <img src="./img/before-webaim-1-index.JPG" alt="webaim">
+            <img src="./img/before-webaim-2-index.JPG" alt="webaim">
         </article>
 
         </section>
