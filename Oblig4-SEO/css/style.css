@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    background-color: #F8F7CD;
+    max-width: 1200px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* keeps footer at bottom but messed up header */
+    /* min-height: 100vh; */
+}
+
+#logo {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+header nav ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    justify-content: flex-end; /* align nav items to the right */
+}
+
+@media (min-width: 768px) {
+    nav {
+        display: flex; /* show the nav on desktop */
+    }
+}
+
+
+header, nav, main, footer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* hamburger menu*/
+
+
+#menu-toggle {
+    display: none; /* hide checkbox */
+}
+
+/*  didn't work
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; 
+} 
+
+/* 
+nav {
+    display: none; /* hide the nav on mobile */  /* 
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* show the hamburger icon on mobile */ /* 
+    }
+}
+
+#menu-toggle:checked ~ nav {
+    display: flex; /* show the nav when the checkbox is checked */ /* 
+}
+*/
+
+#subtitle {
+    margin: 1rem;
+}
+
+.hero-content {
+    background-image: url('https://placehold.co/1920x1080');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: black; 
+    text-align: left; 
+}
+
+.not-hero-content {
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: black; 
+    text-align: center; 
+}
+
+/* grid setup*/
+
+.container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "footer";
+    }
+}
+
+/* product page */
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-details img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .product-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10rem;
+        margin: 0 auto; /* centers the grid horizontally */
+        margin-bottom: 10%;
+    }
+
+    .product-details img {
+        width: auto;
+    }
+}
+
+/* generell flex*/
+
+.article-link {
+    display: block;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    margin: 10px;
+    background-color: #fefef7;
+}
+
+.article-link:hover {
+    border: 1px solid #e0e0e0;
+}
+
+.default-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.default-flex article{
+    flex-basis: 100%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    .default-flex article{
+        flex-basis: calc(33.33% - 20px); /* Display in three columns on desktop */
+        min-width: 0;
+    }
+}
+
+/*
+.default-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.default-flex h2{
+    flex-basis: 100%;
+}
+
+.default-flex article{
+    flex-basis: calc(50% - 20px); // Fjerner dobbel margin fra width 
+    box-sizing: border-box;
+    margin: 10px; // Add margin 
+}
+
+.default-flex article img{
+    width: 100%;
+}
+*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    /* keeps it at bottom yeah not working though. messing up header*/
+    /* margin-top: auto; */
+    
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+}
+
+footer nav ul li {
+    margin: 0 1rem;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    color: #ddd;
+}
