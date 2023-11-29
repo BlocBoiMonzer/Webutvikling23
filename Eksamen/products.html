@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eksamen Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="about.html">Contact</a>
+        </nav>
+        <h1>Portfolio</h1>
+    </header>
+    <main>
+        <section>
+            <div itemscope itemtype="https://schema.org/Product">
+                <h2 itemprop="name">Product Name 1</h2>
+                <img itemprop="image" src="product1.jpg" alt="Product 1">
+                <p itemprop="description">Product 1 description...</p>
+            </div>
+            <div itemscope itemtype="https://schema.org/Product">
+                <h2 itemprop="name">Product Name 2</h2>
+                <img itemprop="image" src="product2.jpg" alt="Product 2">
+                <p itemprop="description">Product 2 description...</p>
+            </div>
+            <!-- Add more product items as needed -->
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </footer>
+    <a href="#top" id="myBtn" title="Go to top">Back to top</a>
+</body>
+</html>

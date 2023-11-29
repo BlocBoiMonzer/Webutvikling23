@@ -1,0 +1,80 @@
+/* Gull-gul kode: #e6bd43
+
+Gråsvart: #252525
+
+Svart: #000
+
+Hvit: #fff */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+}
+
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: repeat(3, 1fr); /* Three columns layout for desktop */
+    }
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center; /* Center the navigation items */
+    margin-bottom: 20px; /* Add some space between nav and header */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e6bd43;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* Align list items to the right */
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav a.button {
+    text-decoration: none;
+    color: #000; /* Black text */
+    background-color: #e6bd43; /* Gull-gul color */
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+header {
+    text-align: center; /* Center the content in the header */
+}
+
+header img {
+    max-width: 100px;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer a:hover {
+    color: #e6bd43;
+}
