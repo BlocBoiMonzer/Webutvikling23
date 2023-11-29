@@ -223,7 +223,9 @@ nav {
 }
 
 .client-logos img {
-    margin: 1rem;
+    margin: 10px;
+    width: 50px;
+    height: auto;
 }
 
 .contact-us {
